@@ -7,15 +7,15 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          NFTLIX 서비스 준비 중입니다!
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/NFTLIX"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          GitHub 바로가기
         </a>
       </header>
     </div>
