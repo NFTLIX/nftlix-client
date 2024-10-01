@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomePage from './HomePage';
+import SignupPage from './SignupPage';
+import LoginPage from "./LoginPage";
+import CreateItemPage from "./CreateItemPage";
+import ItemPage from "./ItemPage";
+import OrderSuccessPage from "./OrderSuccessPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          NFTLIX 서비스 준비 중입니다!
-        </p>
-        <a
-          className="App-link"
-          href="https://github.com/NFTLIX"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub 바로가기
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<HomePage />} />
+        <Route exact path="/signup" element={<SignupPage />} />
+        <Route exact path="/login" element={<LoginPage />} />
+        <Route exact path="/item/new" element={<CreateItemPage />} />
+        <Route exact path="/item/:id" element={<ItemPage />} />
+        <Route exact path="/item/purchase/:id" element={<OrderSuccessPage />} />
+      </Routes>
+    </Router>
   );
 }
 
